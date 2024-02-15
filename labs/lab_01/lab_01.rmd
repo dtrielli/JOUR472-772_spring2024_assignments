@@ -39,41 +39,29 @@ umd_courses <- read_rds("lab_01.rds")
 
 ## Answer questions
 
-**Q1** Which department has the highest mean (average) number of seats for its classes? You need to show the department with the highest average first. Which one is the most surprising/interesting to you? **A1 I think the most interesting one is Eng. Coopr Education with an average of 306 because I can't imagine a classroom with 300 people, let alone with more than that so that the AVERAGE is 300.**
+**Q1** Which department has the highest mean (average) number of seats for its classes? You need to show the department with the highest average first. Which one is the most surprising/interesting to you? **A1**
 
 ```{r}
-umd_courses |>
-  group_by(department) |>
-  summarise(
-    avg_seats = mean(seats)
-  ) |>
-  arrange(desc(avg_seats))
+
 ```
 
-**1Q2** Find out the greatest number of times any individual class has been offered in our dataset. Your code must show the greatest number of classes first. **A2 22 times. There are xxxx classes that were taught**
+**Q2** Find out the greatest number of times any individual class has been offered in our dataset. Your code must show the greatest number of classes first. **A2**
 
 ```{r}
-umd_courses |>
-  group_by(id) |>
-  summarise(
-    count_classes = n()
-    ) |>
-  arrange(desc(count_classes))
+
 ```
 
-**Q3** Count the number of courses for each instructor and department. Which instructor has taught the most? **A3 Keith Yearwood, with 61 classes**
+**Q3** Count the number of courses for each instructor and department. Which instructor has taught the most? **A3**
 
 ```{r}
-umd_courses |>
-  group_by(department,instructors) |>
-  summarise(
-    count_classes = n()
-    ) |>
-  arrange(desc(count_classes)) |>
-  drop_na()
+
 ```
 
 **Q4** Given the results for Q3, what would have made it easier to find the answer? You don't have to know *how* to accomplish this; I want you to describe in words what would make the answer easier to see. How confident are you that the answer you got is the right one, and why? **A4**
+
+```{r}
+
+```
 
 **Q5** Take one of the questions you listed in the final question of the pre_lab and try to answer it here in code. If you don't know how to fully answer it, write what code you can and describe in words what else you would need to do. If you got an answer, is it interesting? **A5**
 
